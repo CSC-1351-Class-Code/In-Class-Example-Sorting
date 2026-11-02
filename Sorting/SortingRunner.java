@@ -6,12 +6,6 @@ import java.util.Stack;
 
 public class SortingRunner {
 	public static void main(String[] args){
-		/* int[] test = makearr(10);
-
-		printarr(test);
-		quickSortIter(test);
-		printarr(test); */
-
 		timeSorting();
 	}
 
@@ -70,14 +64,14 @@ public class SortingRunner {
 
 	// Function to make a random array
 	public static int[] makearr(int size){
-		int[] arr = new int[size];
+		int[] arr = new int[__];
 
-		Random rng = new Random();
+		__ rng = new __();
 		//int bound = 10;
 		int bound = Integer.MAX_VALUE;
 
 		for(int i = 0; i < size; i++){
-			arr[i] = rng.nextInt(bound);
+			arr[i] = rng.__(bound);
 		}
 
 		return arr;
@@ -100,9 +94,9 @@ public class SortingRunner {
 			for(int j = 0; j<arr.length-i-1; j++){
 
 				if(arr[j] > arr[j+1]){
-					int temp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = temp;
+					int __ = arr[__];
+					arr[__] = arr[__];
+					arr[__] = __;
 				}
 			}
 		}
@@ -110,36 +104,36 @@ public class SortingRunner {
 
 	public static void bubbleSortSC(int[] arr){
 		for(int i = 0; i < arr.length-1; i++){
-			boolean swap  = false;
+			boolean swap  = __;
 
 			for(int j = 0; j < arr.length-i-1; j++){
 				if(arr[j] > arr[j+1]){
-					int temp =  arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = temp;
-					swap = true;
+					int __ =  arr[_];
+					arr[__] = arr[__];
+					arr[__] = __;
+					swap = __;
 				}
 			}
 
 			if(!swap){
-				break;
+				__;
 			}
 		}
 	}
 
 	public static void selectionSort(int[] arr) {
 		for(int i=0; i< arr.length-1; i++){
-			int minIndex = i;
+			int __ = i;
 
 			for(int j=i+1; j<arr.length; j++){
-				if(arr[j]<arr[minIndex]){
-					minIndex =j;
+				if(arr[j]<arr[__]){
+					__ = __;
 				}
 			}
 
-			int smallerNumber = arr[minIndex];
-			arr[minIndex] = arr[i];
-			arr[i] = smallerNumber;
+			int smallerNumber = arr[__];
+			arr[__] = arr[__];
+			arr[__] = __;
 		}
 	}
 
@@ -152,8 +146,8 @@ public class SortingRunner {
 			key = arr[i];
 			j = i - 1;
 
-			while (j >= 0 && arr[j] > key){
-				arr[j + 1] = arr[j];
+			while (j >= 0 && arr[__] > __){
+				arr[__] = arr[__];
 				j = j - 1;
 			}
 
@@ -162,7 +156,7 @@ public class SortingRunner {
 	}
 
 	public static void mergeSort(int[] arr) {
-		if (arr.length < 2){
+		if (arr.length < __){
 			return;
 		}
 
@@ -189,7 +183,7 @@ public class SortingRunner {
 		int j = 0;
 		int k = 0;
 
-		while (i < left && j < right) {
+		while (i < __ && j < __) {
 			if (l[i] <= r[j]) {
 				array[k] = l[i];
 				i++;
@@ -201,11 +195,11 @@ public class SortingRunner {
 			k++;
 		}
 
-		while (i < left){
+		while (i < __){
 			array[k++] = l[i++];
 		}
 
-		while (j < right){
+		while (j < __){
 			array[k++] = r[j++];
 		}
 	}
